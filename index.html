@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/8e1d0fee4b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Full page -->
+    <div>
+      <!-- Navbar -->
+      <nav class="section-container flex justify-between items-center">
+        <h1 class="text-2xl font-semibold">Estore</h1>
+        <!-- menu for md screens -->
+        <div class="hidden md:flex">
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="font-medium hover:text-secondary transition duration-300"
+              >Home</a
+            >
+            <a
+              href="#catagory-section"
+              class="font-medium hover:text-secondary transition duration-300"
+              >Catagory</a
+            >
+            <a
+              href="#features-products"
+              class="font-medium hover:text-secondary transition duration-300"
+              >Products</a
+            >
+            <a
+              href="#custom-products"
+              class="font-medium hover:text-secondary transition duration-300"
+              >Featured</a
+            >
+          </div>
+        </div>
+        <div class="hidden md:flex">
+          <button class="px-4 py-2 rounded-lg bg-secondary text-white">
+            Sign in
+          </button>
+        </div>
+        <!-- button for sm screens -->
+        <button class="md:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+      <div id="navMenu" class="hidden md:hidden">
+        <div class="flex flex-col gap-4 px-8 py-4">
+          <a href="#" class="font-medium">Home</a>
+          <a href="#catagory-section" class="font-medium">Catagory</a>
+          <a href="#features-products" class="font-medium">Products</a>
+          <a href="#custom-products" class="font-medium">Featured</a>
+          <!-- border -->
+          <div class="border-t-2 border-black"></div>
+          <!--button-->
+          <div>
+            <button
+              class="px-4 py-2 rounded-lg bg-secondary text-white w-fit mb-4"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- hero section -->
+      <div
+        id="hero-section"
+        class="flex flex-col md:flex-row bg-primary text-white md:py-24 min-h-[90vh]"
+      >
+        <div
+          class="section-container flex flex-col md:w-3/4 py-16 gap-8 max-w-4xl"
+        >
+          <h1 class="text-3xl font-bold md:text-4xl">
+            Welcome to Our Exciting Online Store Experience
+          </h1>
+          <p class="text-lg">
+            Browse our diverse selection of high-quality products and enjoy
+            hassle-free shopping from the comfort of home. Discover exclusive
+            deals and discounts on your favorite brands, all at your fingertips.
+          </p>
+          <div class="flex flex-col md:flex-row w-full gap-4">
+            <button
+              class="px-8 py-2 rounded-lg text-white bg-secondary hover:opacity-85 duration-300"
+            >
+              Shop now
+            </button>
+            <button class="px-8 py-2 rounded-lg text-white border border-white">
+              Learn more
+            </button>
+          </div>
+        </div>
+        <div class="w-72 py-6 mx-auto md:mr-16">
+          <img
+            src="./Assets/hero-section.png"
+            alt="landing-page-img"
+            class="object-cover w-full"
+          />
+        </div>
+      </div>
+      <h1 class="section-head text-center mt-12 mb-6">Features section</h1>
+      <div
+        id="features-section"
+        class="section-container text-white grid md:grid-cols-2 gap-6 xl:grid-cols-4"
+      >
+        <div class="feature-box">
+          <i class="fa-regular fa-face-smile"></i>
+          <span>Safe Payment, Secure Transactions</span>
+        </div>
+        <div class="feature-box">
+          <i class="fa-regular fa-face-smile"></i>
+          <span>Always Here, Customer Support, Day/Night</span>
+        </div>
+        <div class="feature-box">
+          <i class="fa-solid fa-box"></i>
+          <span>No-Fuss Returns, Exchange Made Easy </span>
+        </div>
+        <div class="feature-box">
+          <i class="fa-regular fa-face-smile"></i>
+          <span>Top-Quality Products, Premium Selection </span>
+        </div>
+      </div>
+      <div id="catagory-section" class="section-container">
+        <h1 class="section-head text-center">Our catgories</h1>
+        <p class="text-sm text-gray-600 max-w-xl mx-auto my-4 text-center">
+          Explore our diverse range of categories to find exactly what you're
+          looking for, ensuring a seamless shopping experience for all.
+        </p>
+        <!-- Grid -->
+        <div
+          class="space-y-6 grid md:grid-cols-4 gap-4 md:auto-rows-[14rem] md:space-y-0"
+        >
+          <!-- First box -->
+          <div
+            class="flex flex-col sm:flex-row items-center sm:px-6 bg-primary text-white px-2 py-6 rounded-lg md:col-span-2 md:row-span-2"
+          >
+            <!-- description -->
+            <div class="text-center space-y-4 sm:mx-auto">
+              <p class="uppercase md:text-xl">Black friday sales</p>
+              <h1 class="text-4xl font-medium uppercase">Upto 55% off</h1>
+              <button class="px-4 py-2 bg-white text-black rounded-lg">
+                Shop now
+              </button>
+            </div>
+            <!-- image -->
+            <div class="mt-4 mx-auto">
+              <img
+                src="./Assets/headphone-blue_1-removebg-preview.png"
+                alt="headphone"
+                class="object-cover w-60"
+              />
+            </div>
+          </div>
+          <!-- Second box -->
+          <div
+            class="flex flex-col sm:flex-row items-center sm:px-6 bg-blue text-white px-2 py-6 rounded-lg md:col-span-2"
+          >
+            <!-- description -->
+            <div class="text-center space-y-4 sm:mx-auto">
+              <p class="text-4xl font-medium uppercase">Gaming Pc</p>
+              <button class="px-4 py-2 bg-white text-black rounded-lg">
+                Shop now
+              </button>
+            </div>
+            <!-- image -->
+            <div class="mt-4 mx-auto">
+              <img
+                src="./Assets/images-removebg-preview (1).png"
+                alt="headphone"
+                class="object-cover w-60 h-60"
+              />
+            </div>
+          </div>
+          <!-- Third box -->
+          <div
+            class="flex flex-col sm:flex-row md:flex-col items-center sm:px-6 bg-secondary text-white px-2 py-6 rounded-lg md:py-2"
+          >
+            <!-- description -->
+            <div class="text-center space-y-4 sm:mx-auto md:space-y-2">
+              <h1 class="text-4xl font-medium uppercase md:text-xl">
+                Mobile phone
+              </h1>
+              <button class="px-4 py-2 bg-white text-black rounded-lg">
+                Shop now
+              </button>
+            </div>
+            <!-- image -->
+            <div class="mt-4 mx-auto">
+              <img
+                src="./Assets/iphone__ky2k6x5u6vue_og-removebg-preview.png"
+                alt="headphone"
+                class="object-cover w-60"
+              />
+            </div>
+          </div>
+          <!-- Fourth box -->
+          <div
+            class="flex flex-col sm:flex-row items-center sm:px-6 bg-primary text-white px-2 py-6 rounded-lg md:flex-col md:py-2"
+          >
+            <!-- description -->
+            <div class="text-center space-y-4 sm:mx-auto md:space-y-2">
+              <h1 class="text-4xl font-medium uppercase md:text-xl">
+                Brand shoes
+              </h1>
+              <button class="px-4 py-2 bg-white text-black rounded-lg">
+                Shop now
+              </button>
+            </div>
+            <!-- image -->
+            <div class="mt-4 mx-auto">
+              <img
+                src="./Assets//360_F_612001823_TkzT0xmIgagoDCyQ0yuJYEGu8j6VNVYT-removebg-preview.png"
+                alt="headphone"
+                class="object-cover w-60"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="features-products" class="section-container">
+        <div class="flex items-center gap-2">
+          <div class="section-head">Featured products</div>
+          <hr class="flex-grow border-t-2 border-slate-500" />
+        </div>
+        <!-- products of featured section -->
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Product - 1 -->
+          <div class="product">
+            <img src="./Assets/product-1.png" alt="product" />
+            <p class="product-head">Canon camera</p>
+            <p class="text-gray-600">$300.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">12 Products</div>
+          </div>
+          <!-- Product - 2 -->
+          <div class="product">
+            <img src="./Assets/product-2.png" alt="product" />
+            <p class="product-head">Men's cap</p>
+            <p class="text-gray-600">$12.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">70 Products</div>
+          </div>
+          <!-- Product - 3 -->
+          <div class="product">
+            <img src="./Assets/product-3.png" alt="product" />
+            <p class="product-head">Smart watch</p>
+            <p class="text-gray-600">$80.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">30 Products</div>
+          </div>
+          <!-- Product - 4 -->
+          <div class="product">
+            <img src="./Assets/product-4.png" alt="product" />
+            <p class="product-head">Black t-shirt</p>
+            <p class="text-gray-600">$10.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">90 Products</div>
+          </div>
+          <!-- Product - 5 -->
+          <div class="product">
+            <img src="./Assets/product-5.png" alt="product" />
+            <p class="product-head">Purse</p>
+            <p class="text-gray-600">$25.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">10 Products</div>
+          </div>
+          <!-- Product - 6 -->
+          <div class="product">
+            <img src="./Assets/product-6.png" alt="product" />
+            <p class="product-head">Playstation</p>
+            <p class="text-gray-600">$100.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">20 Products</div>
+          </div>
+          <!-- Product - 7 -->
+          <div class="product">
+            <img src="./Assets/product-7.png" alt="product" />
+            <p class="product-head">Perfume</p>
+            <p class="text-gray-600">$13.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">100 Products</div>
+          </div>
+          <!-- Product - 8 -->
+          <div class="product">
+            <img src="./Assets/product-8.png" alt="product" />
+            <p class="product-head">Shoe's</p>
+            <p class="text-gray-600">$30.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">200 Products</div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="callToAction"
+        class="bg-blue text-white flex justify-center flex-col p-6 sm:flex-row my-12"
+      >
+        <img
+          src="./Assets/happy-customer-780-removebg-preview.png"
+          alt="customer"
+          class="object-cover order-2 sm:order-1 w-72 mx-auto sm:m-0 sm:w-96"
+        />
+        <div
+          class="space-y-3 sm:space-y-4 uppercase font-semibold order-1 sm:order-2 text-center"
+        >
+          <h1 class="text-5xl italic sm:text-7xl">Upto</h1>
+          <h2 class="text-3xl italic sm:text-4xl">80% off</h2>
+          <p class="text-2xl">Save big on your favorite products</p>
+          <div class="flex flex-col justify-center sm:flex-row w-full gap-4">
+            <button
+              class="px-8 py-2 rounded-lg text-white bg-secondary hover:opacity-85 duration-300"
+            >
+              Shop now
+            </button>
+            <button class="px-8 py-2 rounded-lg text-white border border-white">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="custom-products" class="section-container">
+        <div class="flex items-center gap-2">
+          <div class="section-head">for you product</div>
+          <hr class="flex-grow border-t-2 border-slate-500" />
+        </div>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Product - 1 -->
+          <div class="product">
+            <img src="./Assets/product-9.png" alt="product" />
+            <p class="product-head">Smart phone</p>
+            <p class="text-gray-600">$450.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">250 Products</div>
+          </div>
+          <!-- Product - 2 -->
+          <div class="product">
+            <img src="./Assets/product-10.png" alt="product" />
+            <p class="product-head">Laptop</p>
+            <p class="text-gray-600">$950.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">50 Products</div>
+          </div>
+          <!-- Product - 3 -->
+          <div class="product">
+            <img src="./Assets/product-11.png" alt="product" />
+            <p class="product-head">Headphone</p>
+            <p class="text-gray-600">$40.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">10 Products</div>
+          </div>
+          <!-- Product - 4 -->
+          <div class="product">
+            <img src="./Assets/product-12.png" alt="product" />
+            <p class="product-head">Watch</p>
+            <p class="text-gray-600">$25.00</p>
+            <div
+              class="border-2 flex items-center justify-center gap-1 cursor-pointer group hover:scale-105 hover:shadow-lg duration-300"
+            >
+              <button class="py-2 rounded-sm uppercase text-blue font-medium">
+                Shop now
+              </button>
+              <i
+                class="fa-solid fa-arrow-right group-hover:translate-x-3 duration-300"
+              ></i>
+            </div>
+            <div class="product-number">35 Products</div>
+          </div>
+        </div>
+      </div>
+      <!-- social media links -->
+      <div
+        class="bg-primary text-white flex flex-col text-center sm:flex-row sm:justify-between px-8 md:px-16 py-6 mt-8"
+      >
+        <p>Get connected with us on social networks</p>
+        <div class="space-x-3">
+          <i class="fa-brands fa-facebook cursor-pointer"></i>
+          <i class="fa-brands fa-instagram cursor-pointer"></i>
+          <i class="fa-brands fa-twitter cursor-pointer"></i>
+          <i class="fa-brands fa-github cursor-pointer"></i>
+        </div>
+      </div>
+
+      <footer
+        class="bg-black text-white grid gap-6 sm:grid-cols-2 lg:grid-cols-4 px-8 md:px-16 py-10"
+      >
+        <div class="space-y-3">
+          <div class="mb-4">
+            <div class="text-2xl font-semibold">Estore</div>
+            <div class="border-t-2 w-12"></div>
+          </div>
+          <p>
+            eStore is your ultimate shopping destination, offering a wide range
+            of high-quality products at competitive prices. Enjoy seamless
+            browsing, secure payments, and exceptional customer service every
+            step of the way.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="mb-4">
+            <div class="text-2xl font-semibold">Products</div>
+            <div class="border-t-2 w-12"></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <a href="#">Clothing</a>
+            <a href="#">Phones</a>
+            <a href="#">Television</a>
+            <a href="#">Footwear</a>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="mb-4">
+            <div class="text-2xl font-semibold">Useful links</div>
+            <div class="border-t-2 w-12"></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <a href="#">Your Account</a>
+            <a href="#">Become an Affiliate</a>
+            <a href="#">Policies</a>
+            <a href="#">Shipping Rates</a>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="mb-4">
+            <div class="text-2xl font-semibold">Contact</div>
+            <div class="border-t-2 w-12"></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div>
+              <i class="fa-solid fa-house"></i>
+              <span>Punjab,India</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-envelope"></i>
+              <span>demo@gmail.com</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 7696409799</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

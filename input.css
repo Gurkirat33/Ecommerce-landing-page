@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-8 py-4 lg:px-16;
+  }
+  .section-head {
+    @apply text-3xl md:text-4xl  uppercase text-blue font-bold;
+  }
+  .product {
+    @apply border-4 p-2 space-y-2 text-center md:text-left shadow-lg relative;
+  }
+  .product img {
+    @apply object-cover w-40 aspect-square mx-auto hover:scale-110 duration-300;
+  }
+  .product-number {
+    @apply absolute rounded-lg -top-6 -right-1 bg-secondary text-white px-4 py-2;
+  }
+  .product-head {
+    @apply text-2xl text-blue font-semibold;
+  }
+  .feature-box {
+    @apply flex items-center justify-center gap-3 bg-primary p-4 xl:px-6 rounded-lg;
+  }
+}
